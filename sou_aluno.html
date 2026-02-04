@@ -1,6 +1,9 @@
 <html>
     <head>
         <title>sou aluno(a)</title>
+
+        <link rel="icon" type="image/x-icon" href="./imagem_html/lua-icon.webp">
+        
         <style>
             * {
                 margin: 0;
@@ -9,27 +12,47 @@
             }
             
             body {
-                background-image: url('./imagem_html/e-luna_fundo.jpg');
+                background-image: url('./imagem_html/wallpaper_sou-aluno.jpg');
                 font-family: Arial;
-                padding: 20px;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-color: #cccccc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                padding: 20px;
+            }
+            
+            .container {
+                text-align: center;
+                background: rgba(53, 5, 54, 0.85);
+                padding: 40px;
+                border-radius: 15px;
+                max-width: 450px;
+                width: 100%;
             }
             
             h1 {
                 color: #ffffff;
                 margin-bottom: 20px;
                 font-size: 2.5em;
-                text-align: center;
             }
             
             p {
                 color: #9dcddb; 
                 margin-bottom: 15px;
                 font-size: 1.1em;
+            }
+
+            input[type="email"], input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border-radius: 20px;
+                border: none;
             }
 
             button {
@@ -39,11 +62,12 @@
                 padding: 12px 30px;
                 border-radius: 5px;
                 text-decoration: none;
-                margin: 10px 5px;
+                margin: 5px 5px;
                 transition: background 0.3s ease; 
                 border: none;
                 cursor: pointer;
                 font-size: 1em;
+                width: 100%; 
             }
             
             button:hover {
@@ -60,25 +84,25 @@
                 color: #6fee8a; 
                 font-size: 1em;
                 vertical-align: middle;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>bem vindo(a) novamente!</h1>
-            <p>preencha as informações para entrar na sua conta:</p>
+            <p>preencha os dados a seguir para entrar na sua conta:</p>
             <form>
                 <input type="email" placeholder="e-mail">
-                <br>
-                <br>
                 <input type="password" placeholder="senha">
-                <br>
-                <br>
-                <input type="checkbox"> <span class="span">lembre de mim</span>
-                <br>
-                <br>
+                <div style="margin-bottom: 20px;">
+                    <input type="checkbox"> <span class="span">lembre de mim</span>
+                </div>
                 <button type="submit" onclick="alert('sentimos sua falta, bem vindo(a) novamente!')">logar</button>
-                <br>
                 <button type="reset" onclick="alert('reset com sucesso!')">limpar</button>
             </form>
             <p>retorne a pagina inicial com o link a seguir:</p>

@@ -1,6 +1,9 @@
 <html>
     <head>
         <title>e-luna</title>
+
+        <link rel="icon" type="image/x-icon" href="./imagem_html/lua-icon.webp">
+
         <style>
             * {
                 margin: 0;
@@ -18,6 +21,10 @@
                 background-attachment: fixed;
                 background-color: #cccccc;
             }
+
+            .container {
+                text-align: center;
+            }
             
             h1 {
                 color: #ffffff;
@@ -30,6 +37,7 @@
                 color: #9dcddb; 
                 margin-bottom: 15px;
                 font-size: 1.1em;
+                text-align: center;
             }
 
             button {
@@ -51,9 +59,87 @@
             }
 
             a {
-                color: #6fee8a; 
+                display: inline-block;
+                background: #667eea; 
+                color: white;
+                padding: 12px 30px;
+                border-radius: 5px;
+                text-decoration: none;
+                margin: 10px 5px;
+                transition: background 0.3s ease; 
+                border: none;
+                cursor: pointer;
                 font-size: 1em;
-                vertical-align: middle;
+            }
+
+            a:hover {
+                background: #764ba2; 
+                text-decoration: underline;
+            }
+
+            .linguagens {
+                margin-top: 25px;
+            }
+
+            .span {
+                text-align: center;
+                background: rgba(1, 35, 63, 0.5);
+                padding: 10px;
+                border-radius: 15px;
+                max-width: 450px;
+                width: 100%;
+            }
+
+            .linguagens h2 {
+                color: #ffffff;
+                margin: 10px 0 15px;
+                font-size: 1.8em;
+                text-align: center;
+            }
+
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 16px;
+                margin-top: 10px;
+            }
+
+            .card {
+                background: rgba(0, 0, 0, 0.55);
+                border: 1px solid rgba(157, 205, 219, 0.35);
+                border-radius: 10px;
+                padding: 14px;
+                backdrop-filter: blur(3px);
+            }
+
+            .card h3 {
+                color: #6fee8a;
+                margin-bottom: 10px;
+                font-size: 1.2em;
+            }
+
+            .card p {
+                color: #9dcddb;
+                margin-bottom: 10px;
+                font-size: 1em;
+                text-align: left;
+            }
+
+            .card pre {
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                border-radius: 8px;
+                padding: 12px;
+                overflow-x: auto;
+                margin: 0;
+            }
+
+            .card code {
+                color: #ffffff;
+                font-family: Consolas, "Courier New", monospace;
+                font-size: 0.95em;
+                line-height: 1.35;
+                white-space: pre;
             }
         </style>
     </head>
@@ -61,12 +147,65 @@
         <div class="container">
             <h1>Bem vindo a e-luna!</h1>
             <p>A e-luna é uma plataforma de ensino digital criada para impulsionar carreiras por meio da tecnologia. Aqui, oferecemos cursos completos e atualizados sobre programação e os softwares mais importantes do mercado, pensados para quem quer aprender na prática e se destacar profissionalmente.</p>
-            <p>os conteúdos desenvolvidos por especialistas, a e-luna conecta conhecimento, inovação e flexibilidade, permitindo que você estude no seu ritmo e transforme aprendizado em resultados reais. Seja você iniciante ou profissional em busca de evolução, a e-luna é o seu próximo passo no universo da tecnologia.</p>
+            <p>os conteúdos são desenvolvidos por especialistas, a e-luna conecta conhecimento, inovação e flexibilidade, permitindo que você estude no seu ritmo e transforme aprendizado em resultados reais. Seja você iniciante ou profissional em busca de evolução, a e-luna é o seu próximo passo no universo da tecnologia.</p>
             <br>
-            <p>caso tenha interesse em se tornar aluno, clique no link abaixo:</p>
+            <div class="linguagens">
+            <h2>Exemplos de linguagens aprendidas</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>HTML</h3>
+                    <p>Estrutura básica de uma página.</p>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Olá&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</code></pre>
+                </div>
+
+                <div class="card">
+                    <h3>CSS</h3>
+                    <p>Um botão simples com hover.</p>
+                    <pre><code>button{
+        background:#667eea;
+        color:white;
+        padding:10px 16px;
+        border:0;
+        border-radius:6px;
+        }
+        button:hover{
+        background:#764ba2;
+        }</code></pre>
+                </div>
+
+                <div class="card">
+                    <h3>JavaScript</h3>
+                    <p>Interação básica ao clicar em um botão.</p>
+                    <pre><code>function dizerOla(){
+        alert("Olá, mundo!");
+        }</code></pre>
+                </div>
+
+                <div class="card">
+                    <h3>Python</h3>
+                    <p>Programa simples imprimindo uma mensagem.</p>
+                    <pre><code>def main():
+            print("Olá, mundo!")
+
+        if __name__ == "__main__":
+            main()</code></pre>
+                </div>
+            </div>
+        </div>
+            <br>
+            <p><span class="span">caso tenha interesse em se tornar aluno, clique no link abaixo:</span></p>
             <a href="cadastro.html" target="_blank">se cadastre</a>
             <br> <br>
-            <p>caso já tenha conta, clique no link abaixo:</p>
+            <p><span class="span">caso já tenha conta, clique no link abaixo:</span></p>
             <a href="sou_aluno.html" target="_blank">se cadastre</a>
         </div>
     </body>

@@ -25,6 +25,47 @@
                 min-height: 100vh;
                 padding: 20px;
             }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(2, 49, 87, 0.9);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 50px;
+                z-index: 1000;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            }
+
+            .logo-container img {
+                height: 50px; 
+                width: auto;
+                display: block;
+            }
+
+            .nav-links {
+                list-style: none;
+                display: flex;
+            }
+
+            .nav-links li {
+                margin-left: 20px;
+            }
+
+            .nav-links a {
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 1.1em;
+                transition: color 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #6fee8a;
+                text-decoration: none;
+            }
             
             .container {
                 text-align: center;
@@ -33,6 +74,7 @@
                 border-radius: 15px;
                 max-width: 450px;
                 width: 100%;
+                margin-top: 20px;
             }
             
             h1 {
@@ -90,9 +132,26 @@
             a:hover {
                 text-decoration: underline;
             }
+
+            @media (max-width: 600px) {
+                .navbar {
+                    padding: 10px 20px;
+                }
+                .nav-links li {
+                    margin-left: 10px;
+                }
+                .nav-links a {
+                    font-size: 0.9em;
+                }
+            }
         </style>
     </head>
     <body>
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="home.html" target="_blank"><img src="./imagem_html/ChatGPT Image 5 de fev. de 2026, 16_38_42.png" alt="Logo do Site"></a>
+        </nav>
+
         <div class="container">
             <h1>bem vindo(a) novamente!</h1>
             <p>preencha os dados a seguir para entrar na sua conta:</p>
@@ -103,10 +162,8 @@
                     <input type="checkbox"> <span class="span">lembre de mim</span>
                 </div>
                 <button type="submit" onclick="alert('sentimos sua falta, bem vindo(a) novamente!')">logar</button>
-                <button type="reset" onclick="alert('reset com sucesso!')">limpar</button>
+                <button type="reset" onclick="alert('limpo com sucesso!')">limpar</button>
             </form>
-            <p>retorne a pagina inicial com o link a seguir:</p>
-            <a href="home.html" target="_blank">retornar</a>
         </div>
     </body>
 </html>
